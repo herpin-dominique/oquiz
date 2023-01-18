@@ -1,0 +1,20 @@
+{
+  "name": "s05-oquiz-herpin-dominique",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "db:create": "psql -U domi -d oquiz -f ./data/create_tables.sql",
+    "db:seed": "psql -U domi -d oquiz -f ./data/populate_tables.sql",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "pg": "^8.8.0"
+  }
+}

@@ -1,0 +1,22 @@
+Entités:
+Niveau (code_niveau,nom)
+Question (code_question,descrition,anectote,wiki)
+reponse (code_reponse,description)
+utilisateur(code_utilisateur,prénom,nom,email,mot_de_passe_créé)
+quizz(code_quizz,titre,description)
+categorie(code_categorie,nom)
+////
+
+Relations:
+Niveau possède 0N Questions
+Question appartient à 1N Niveau
+question possède 0N réponse
+réponse appartient à 1N question
+utilisateur possede 0N quizz
+quizz appartient à 1N utilisateur
+quizz appartient à 0N categorie
+categorie possede ON quizz
+
+Associations :utilisateur crée 1N quizz
+question compose 1N reponse
+quizz appartient 1N categorie
